@@ -11,7 +11,9 @@ const app = express();
 const DB = "mongodb+srv://ajay:ajay12@cluster0.wcbuxhb.mongodb.net/?retryWrites=true&w=majority";
 
 //middleware
+app.use(express.json());
 app.use(authRouter);
+
 
 //Connections
 mongoose
