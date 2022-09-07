@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/constants/global_variables.dart';
+import 'package:shop_app/features/home/screen/category_deals_screen.dart';
 
 class TopCategories extends StatelessWidget {
   const TopCategories({Key? key}) : super(key: key);
 
   void navigateToCategoryPage(BuildContext context, String category) {
-    // Navigator.pushNamed(context, CategoryDealsScreen.routeName,
-    //     arguments: category);
+    Navigator.pushNamed(context, CategoryDealsScreen.routeName,
+        arguments: category);
   }
 
   @override
