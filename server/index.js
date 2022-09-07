@@ -1,7 +1,7 @@
 //import from packages
 const express = require("express");
 const mongoose = require("mongoose");
-
+const adminRouter = require("./routes/admin");
 //imports from other files
 const authRouter = require("./routes/auth");
 
@@ -13,6 +13,7 @@ const DB = "mongodb+srv://ajay:ajay12@cluster0.wcbuxhb.mongodb.net/?retryWrites=
 //middleware
 app.use(express.json());
 app.use(authRouter);
+app.use(adminRouter);
 
 
 //Connections
