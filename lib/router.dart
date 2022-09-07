@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/common/bottom_bar.dart';
 import 'package:shop_app/features/auth/screens/auth_screen.dart';
-import 'package:shop_app/home/screen/home_screen.dart';
+import 'package:shop_app/features/home/screen/home_screen.dart';
 
 Route<dynamic> genrateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
@@ -15,6 +16,13 @@ Route<dynamic> genrateRoute(RouteSettings routeSettings) {
         settings: routeSettings,
         builder: (_) => const HomeScreen(),
       );
+
+    case BottomBar.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => const BottomBar(),
+      );
+
     default:
       return MaterialPageRoute(
         settings: routeSettings,
