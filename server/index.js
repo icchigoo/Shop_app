@@ -1,25 +1,25 @@
-//import from packages
+// IMPORTS FROM PACKAGES
 const express = require("express");
 const mongoose = require("mongoose");
 const adminRouter = require("./routes/admin");
-//imports from other files
+// IMPORTS FROM OTHER FILES
 const authRouter = require("./routes/auth");
 const productRouter = require("./routes/product");
 const userRouter = require("./routes/user");
 
-//init
-const PORT =  3000;
+// INIT
+const PORT = process.env.PORT || 3000;
 const app = express();
 const DB = "mongodb+srv://ajay:ajay12@cluster0.wcbuxhb.mongodb.net/?retryWrites=true&w=majority";
 
-//middleware
+// middleware
 app.use(express.json());
 app.use(authRouter);
 app.use(adminRouter);
 app.use(productRouter);
 app.use(userRouter);
 
-//Connections
+// Connections
 mongoose
   .connect(DB)
   .then(() => {
@@ -29,6 +29,6 @@ mongoose
     console.log(e);
   });
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`connected at port ${PORT}`);
-  });
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`connected at port ${PORT}`);
+});

@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Shop App',
+      title: 'Amazon Clone',
       theme: ThemeData(
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
         colorScheme: const ColorScheme.light(
@@ -49,8 +49,9 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
+        useMaterial3: true, // can remove this line
       ),
-      onGenerateRoute: (settings) => genrateRoute(settings),
+      onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
           ? Provider.of<UserProvider>(context).user.type == 'user'
               ? const BottomBar()

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/common/widgets/loader.dart';
-import 'package:shop_app/features/home/services/home_services.dart';
-import 'package:shop_app/features/product_details/screens/product_details_screen.dart';
 import 'package:shop_app/models/product.dart';
+
+import '../../product_details/screens/product_details_screen.dart';
+import '../services/home_services.dart';
 
 class DealOfDay extends StatefulWidget {
   const DealOfDay({Key? key}) : super(key: key);
@@ -70,7 +71,7 @@ class _DealOfDayState extends State<DealOfDay> {
                       padding:
                           const EdgeInsets.only(left: 15, top: 5, right: 40),
                       child: const Text(
-                        'Product Name',
+                        'Rivaan',
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),

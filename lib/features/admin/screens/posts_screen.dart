@@ -1,5 +1,3 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:flutter/material.dart';
 import 'package:shop_app/common/widgets/loader.dart';
 import 'package:shop_app/features/account/widgets/single_product.dart';

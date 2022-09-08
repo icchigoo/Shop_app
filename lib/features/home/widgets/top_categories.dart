@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/constants/global_variables.dart';
-import 'package:shop_app/features/home/screen/category_deals_screen.dart';
+
+import '../../../constants/global_variables.dart';
+import '../screen/category_deals_screen.dart';
 
 class TopCategories extends StatelessWidget {
   const TopCategories({Key? key}) : super(key: key);

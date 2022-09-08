@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/common/widgets/custom_button.dart';
-import 'package:shop_app/constants/global_variables.dart';
-import 'package:shop_app/features/cart/widgets/cart_product.dart';
-import 'package:shop_app/features/cart/widgets/cart_subtotal.dart';
-import 'package:shop_app/features/search/screens/search_screen.dart';
-import 'package:shop_app/providers/user_provider.dart';
+
+import '../../../constants/global_variables.dart';
+import '../../../providers/user_provider.dart';
+import '../../address/screens/address_screen.dart';
+import '../../home/widgets/address_box.dart';
+import '../../search/screens/search_screen.dart';
+import '../widgets/cart_product.dart';
+import '../widgets/cart_subtotal.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -19,13 +22,13 @@ class _CartScreenState extends State<CartScreen> {
     Navigator.pushNamed(context, SearchScreen.routeName, arguments: query);
   }
 
-  // void navigateToAddress(int sum) {
-  //   Navigator.pushNamed(
-  //     context,
-  //     //AddressScreen.routeName,
-  //     arguments: sum.toString(),
-  //   );
-  // }
+  void navigateToAddress(int sum) {
+    Navigator.pushNamed(
+      context,
+      AddressScreen.routeName,
+      arguments: sum.toString(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,14 +114,13 @@ class _CartScreenState extends State<CartScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            //  const AddressBox(),
+            const AddressBox(),
             const CartSubtotal(),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CustomButton(
                 text: 'Proceed to Buy (${user.cart.length} items)',
-                // onTap: () => navigateToAddress(sum),
-                onTap: () {},
+                onTap: () => navigateToAddress(sum),
                 color: Colors.yellow[600],
               ),
             ),

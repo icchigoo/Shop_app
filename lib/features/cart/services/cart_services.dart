@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:shop_app/constants/error_handling.dart';
-import 'package:shop_app/constants/global_variables.dart';
 import 'package:shop_app/constants/utils.dart';
 import 'package:shop_app/models/product.dart';
 import 'package:shop_app/models/user.dart';
 import 'package:shop_app/providers/user_provider.dart';
+
+import '../../../constants/global_variables.dart';
 
 class CartServices {
   void removeFromCart({

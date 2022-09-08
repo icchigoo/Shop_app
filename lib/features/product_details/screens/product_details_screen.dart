@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/common/widgets/custom_button.dart';
-import 'package:shop_app/common/widgets/stars.dart';
-import 'package:shop_app/constants/global_variables.dart';
-import 'package:shop_app/features/product_details/services/product_details_services.dart';
-import 'package:shop_app/features/search/screens/search_screen.dart';
-import 'package:shop_app/models/product.dart';
-import 'package:shop_app/providers/user_provider.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/stars.dart';
+import '../../../constants/global_variables.dart';
+import '../../../models/product.dart';
+import '../../../providers/user_provider.dart';
+import '../../search/screens/search_screen.dart';
+import '../services/product_details_services.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   static const String routeName = '/product-details';
